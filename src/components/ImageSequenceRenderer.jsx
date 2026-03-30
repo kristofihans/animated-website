@@ -16,7 +16,7 @@ const ImageSequenceRenderer = () => {
     for (let i = 1; i <= FRAME_COUNT; i++) {
       const img = new Image();
       const numStr = i.toString().padStart(4, '0');
-      img.src = `/frames/${numStr}.jpg`;
+      img.src = `${import.meta.env.BASE_URL}frames/${numStr}.jpg`;
       img.onload = () => {
         loaded++;
         setLoadedCount(loaded);
